@@ -1,0 +1,19 @@
+<header class="topbar">
+  <div class="brand">Kotaparthi Sai Gopal</div>
+  <nav class="nav">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/projects" routerLinkActive="active">Projects</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <router-outlet></router-outlet>
+  </section>
+</main>
+
+<footer class="site-footer">
+  Built with MongoDB • Express • Angular • Node.js
+</footer>

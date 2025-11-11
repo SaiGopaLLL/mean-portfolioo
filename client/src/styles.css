@@ -1,0 +1,93 @@
+/* Global styles to force the preview layout exactly */
+:root{
+  --accent:#0b74da;
+  --muted:#6b7280;
+  --card-bg:#ffffff;
+  --page-bg:#f4f4f6;
+  --max-width:980px;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+html,body { height:100%; }
+body {
+  margin:0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--page-bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Top navigation */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 22px;
+  background: var(--accent);
+  color:#fff;
+  box-shadow:0 2px 0 rgba(11,116,218,0.08);
+}
+.topbar .brand{
+  font-weight:700;
+  color: #fff;
+}
+.topbar .nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:14px;
+  padding:8px 12px;
+  border-radius:6px;
+  background: rgba(0,0,0,0.12);
+  font-weight:600;
+}
+.topbar .nav a.active{
+  background: rgba(0,0,0,0.18);
+}
+
+/* Page wrapper */
+.container{
+  max-width:var(--max-width);
+  margin:26px auto;
+  padding:0 16px;
+  min-height:60vh;
+}
+
+/* Card used by home/about/contact */
+.card {
+  background:var(--card-bg);
+  padding:22px;
+  border-radius:var(--radius);
+  box-shadow:0 8px 18px rgba(15,23,42,0.06);
+}
+
+/* Home specific */
+.home-card {
+  margin:0 auto;
+  max-width:820px;
+}
+.home-card h1{ margin:0 0 6px; font-size:32px; line-height:1.05; }
+.home-card p.lead { margin:8px 0 12px; color:#111827; font-weight:600; }
+.home-card p.normal { margin:6px 0; color:var(--muted); line-height:1.5; }
+.home-card a { color:var(--accent); text-decoration:underline; }
+
+/* Projects */
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:14px; }
+.project-card { padding:14px; border-radius:8px; background:var(--card-bg); border:1px solid rgba(15,23,42,0.03); }
+
+/* Contact */
+.contact-form { display:flex; flex-direction:column; gap:10px; max-width:520px; }
+input, textarea { padding:10px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); width:100%; }
+button { background:var(--accent); color:#fff; padding:10px 14px; border-radius:8px; border:none; cursor:pointer; }
+
+/* Footer */
+.site-footer{ text-align:center; color:var(--muted); padding:28px 8px; margin-top:30px; }
+
+/* small screens */
+@media (max-width:720px){
+  .topbar { flex-direction:column; align-items:flex-start; gap:8px; padding:12px; }
+  .topbar .nav a { margin-left:0; margin-right:8px; }
+  .container { margin:18px auto; padding:0 12px; }
+  .home-card h1 { font-size:24px; }
+}
