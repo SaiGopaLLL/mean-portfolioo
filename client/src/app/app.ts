@@ -20,10 +20,7 @@ import { ContactComponent } from './components/contact/contact';
     RouterLinkActive,
     HttpClientModule,
     FormsModule,
-    HomeComponent,
-    AboutComponent,
-    ProjectsComponent,
-    ContactComponent
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.css']
